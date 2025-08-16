@@ -1,31 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Портфолио  </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Анастасия Креатив</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
-        .photo { width: 200px; border-radius: 50%; }
-        .skills { background: #f4f4f4; padding: 15px; border-radius: 10px; }
+        :root {
+            --primary: #6e45e2;
+            --secondary: #88d3ce;
+            --accent: #ff7e5f;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 0 auto 25px;
+            background-color: #eee; /* Заглушка если нет фото */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-top: 0;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        
+        .about-text {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .skill {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .project-btn {
+            background: white;
+            border: 2px solid var(--secondary);
+            color: var(--primary);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .project-btn:hover {
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            color: white;
+            border-color: transparent;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(110, 69, 226, 0.3);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>👋 Привет, я Маша </h1>
-    <img src="photo.jpg" alt="Моё фото" class="photo">
-    
-    <h2>Обо мне:</h2>
-    <p>Здесь напишите о себе, своих навыках и опыте.</p>
-    
-    <h2>🛠 Программы, в которых я работаю:</h2>
-    <div class="skills">
-        <ul>
-            <li>Adobe Photoshop</li>
-            <li>Figma</li>
-            <li>Illustrator</li>
-            <li>Blender</li>
-        </ul>
+    <div class="container">
+        <header>
+            <div class="avatar">
+                [Ваше фото]
+            </div>
+            <h1>Анастасия Креатив</h1>
+            <p class="tagline">Графический дизайнер & Художник</p>
+        </header>
+        
+        <section id="about">
+            <h2>Обо мне</h2>
+            <div class="about-text">
+                <p>Привет! Я профессиональный графический дизайнер с 5-летним опытом работы. Специализируюсь на создании современных логотипов, брендинге и цифровой иллюстрации.</p>
+                <p>Моя философия — сочетание минимализма и функциональности. Каждый проект для меня — это возможность создать что-то уникальное и запоминающееся.</p>
+            </div>
+            
+            <h3>Мои навыки:</h3>
+            <div class="skills">
+                <span class="skill">Adobe Photoshop</span>
+                <span class="skill">Illustrator</span>
+                <span class="skill">Figma</span>
+                <span class="skill">Procreate</span>
+                <span class="skill">Бренд-дизайн</span>
+                <span class="skill">UI/UX</span>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2>Мои проекты</h2>
+            <div class="projects">
+                <a href="#" class="project-btn">Логотип для кафе "Уют"</a>
+                <a href="#" class="project-btn">Брендинг косметики "Lumina"</a>
+                <a href="#" class="project-btn">Иллюстрации для книги</a>
+                <a href="#" class="project-btn">Дизайн мобильного приложения</a>
+                <a href="#" class="project-btn">Упаковка для чая</a>
+                <a href="#" class="project-btn">Анимационные стикеры</a>
+            </div>
+        </section>
+        
+        <footer>
+            <p>© 2023 Анастасия Креатив. Все права защищены.</p>
+            <p>Свяжитесь со мной: example@email.com | +7 (123) 456-78-90</p>
+        </footer>
     </div>
-    
-    <h2>📧 Контакты:</h2>
-    <p><a href="mailto:почта@пример.com">почта@пример.com</a></p>
 </body>
 </html>
