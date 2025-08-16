@@ -21,55 +21,52 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 40px 20px;
         }
         
-        .header-container {
-            display: flex;
-            align-items: center;
-            gap: 50px;
+        header {
+            text-align: center;
             margin-bottom: 50px;
         }
         
-        .photo-column {
-            flex: 1;
-        }
-        
-        .info-column {
-            flex: 1.5;
-        }
-        
         .avatar {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 15px;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
             object-fit: cover;
             border: 5px solid white;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 0 auto 25px;
+            display: block;
         }
         
         h1 {
-            font-size: 2.8rem;
-            margin: 0 0 20px 0;
+            font-size: 2.5rem;
+            margin: 0;
             background: linear-gradient(to right, var(--primary), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         
         .tagline {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: #666;
-            margin-bottom: 30px;
+            margin-top: 10px;
         }
         
-        .about-section {
+        section {
             background: white;
             border-radius: 15px;
             padding: 30px;
+            margin-bottom: 30px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
         }
         
         h2 {
@@ -104,7 +101,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
-            margin-top: 30px;
         }
         
         .project-btn {
@@ -135,48 +131,38 @@
             color: #666;
         }
         
-        @media (max-width: 900px) {
-            .header-container {
-                flex-direction: column;
-                gap: 30px;
-            }
-            
-            .avatar {
-                max-width: 300px;
+        @media (max-width: 768px) {
+            .projects {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header-container">
-            <div class="photo-column">
-                <img src="DSCN0255.JPG" class="avatar" alt="Фото Марии Денисюк">
+        <header>
+            <img src="DSCN0255.JPG" class="avatar" alt="Фото Марии Денисюк">
+            <h1>Мария Денисюк</h1>
+            <p class="tagline">Графический дизайнер & Художник</p>
+        </header>
+        
+        <section id="about">
+            <h2>Обо мне</h2>
+            <div class="about-text">
+                <p>Привет! Я профессиональный графический дизайнер с 5-летним опытом работы. Специализируюсь на создании современных логотипов, брендинге и цифровой иллюстрации.</p>
+                <p>Моя философия — сочетание минимализма и функциональности. Каждый проект для меня — это возможность создать что-то уникальное и запоминающееся.</p>
             </div>
             
-            <div class="info-column">
-                <h1>Мария Денисюк</h1>
-                <p class="tagline">Графический дизайнер & Художник</p>
-                
-                <div class="about-section">
-                    <h2>Обо мне</h2>
-                    <div class="about-text">
-                        <p>Привет! Я профессиональный графический дизайнер с 5-летним опытом работы. Специализируюсь на создании современных логотипов, брендинге и цифровой иллюстрации.</p>
-                        <p>Моя философия — сочетание минимализма и функциональности. Каждый проект для меня — это возможность создать что-то уникальное и запоминающееся.</p>
-                    </div>
-                    
-                    <h3>Мои навыки:</h3>
-                    <div class="skills">
-                        <span class="skill">Adobe Photoshop</span>
-                        <span class="skill">Illustrator</span>
-                        <span class="skill">Figma</span>
-                        <span class="skill">Procreate</span>
-                        <span class="skill">Бренд-дизайн</span>
-                        <span class="skill">UI/UX</span>
-                    </div>
-                </div>
+            <h3>Мои навыки:</h3>
+            <div class="skills">
+                <span class="skill">Adobe Photoshop</span>
+                <span class="skill">Illustrator</span>
+                <span class="skill">Figma</span>
+                <span class="skill">Procreate</span>
+                <span class="skill">Бренд-дизайн</span>
+                <span class="skill">UI/UX</span>
             </div>
-        </div>
+        </section>
         
         <section id="projects">
             <h2>Мои проекты</h2>
@@ -197,3 +183,4 @@
     </div>
 </body>
 </html>
+проанализирй и используя мое название файла,если нужно поправь
