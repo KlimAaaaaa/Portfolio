@@ -1,0 +1,481 @@
+:root {
+    --primary: #6e45e2;
+    --secondary: #88d3ce;
+    --accent: #ff7e5f;
+    --text: #333;
+    --light-bg: #f5f7fa;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--light-bg) 0%, #c3cfe2 100%);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.header-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.photo-column {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.info-column {
+    text-align: center;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.projects-container {
+    margin: 40px 0;
+}
+
+.projects-title {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.projects-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--secondary), var(--accent));
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text);
+    margin: 0;
+}
+
+
+
+/* Стили для блока навыков */
+.skills-section {
+    margin: 40px 0;
+}
+
+.skills-title {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.skills-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--secondary), var(--accent));
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.skill-item {
+    background: white;
+    border-radius: 12px;
+    padding: 25px 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary), var(--accent));
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.skill-icon {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    display: inline-block;
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.skill-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text);
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin: 0 0 20px 0;
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.about-section {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.project-btn {
+    background: white;
+    border: 2px solid var(--secondary);
+    color: var(--primary);
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.project-btn:hover {
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    color: white;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 900px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .photo-column {
+        position: static;
+    }
+
+    .avatar {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+    }
+
+    .skill-item {
+        padding: 20px 10px;
+    }
+
+    .skill-icon {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Модальное окно для проектов */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: white;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: modalOpen 0.4s;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.project-details {
+    margin-top: 20px;
+}
+
+@keyframes modalOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили для модального окна кафе Уют */
+.project-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.project-description {
+    padding-right: 20px;
+}
+
+.features-list {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.features-list li {
+    margin-bottom: 10px;
+    position: relative;
+    list-style-type: none;
+}
+
+.features-list li::before {
+    content: '•';
+    color: var(--accent);
+    font-size: 1.5rem;
+    position: absolute;
+    left: -20px;
+    top: -5px;
+}
+
+.main-project-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.main-project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-media {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.media-item h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.media-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.media-wrapper video,
+.media-wrapper img {
+    width: 100%;
+    display: block;
+}
+
+.visit-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.visit-btn:hover {
+    transform: translateX(10px);
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+    .project-header {
+        grid-template-columns: 1fr;
+    }
+
+    .project-media {
+        grid-template-columns: 1fr;
+    }
+
+    .main-project-image {
+        height: 300px;
+    }
+}
+
+/* Стили для карточки проекта */
+.card-image-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 280px;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    padding: 30px 20px 20px;
+    color: white;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .card-overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+.project-badge {
+    display: inline-block;
+    background-color: var(--accent);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.view-project-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.view-project-btn:hover {
+    background: white;
+    color: var(--primary);
+    transform: translateX(5px);
+}

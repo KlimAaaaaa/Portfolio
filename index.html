@@ -1,186 +1,169 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио | Мария Денисюк</title>
-    <style>
-        :root {
-            --primary: #6e45e2;
-            --secondary: #88d3ce;
-            --accent: #ff7e5f;
-        }
-        
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: #333;
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .avatar {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin: 0 auto 25px;
-            display: block;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            background: linear-gradient(to right, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .tagline {
-            font-size: 1.2rem;
-            color: #666;
-            margin-top: 10px;
-        }
-        
-        section {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-        
-        section:hover {
-            transform: translateY(-5px);
-        }
-        
-        h2 {
-            color: var(--primary);
-            margin-top: 0;
-            border-bottom: 2px solid var(--secondary);
-            padding-bottom: 10px;
-            display: inline-block;
-        }
-        
-        .about-text {
-            line-height: 1.8;
-            font-size: 1.1rem;
-        }
-        
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
-        }
-        
-        .skill {
-            background: linear-gradient(to right, var(--secondary), var(--primary));
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-        
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .project-btn {
-            background: white;
-            border: 2px solid var(--secondary);
-            color: var(--primary);
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: block;
-        }
-        
-        .project-btn:hover {
-            background: linear-gradient(to right, var(--primary), var(--accent));
-            color: white;
-            border-color: transparent;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(110, 69, 226, 0.3);
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            color: #666;
-        }
-        
-        @media (max-width: 768px) {
-            .projects {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="container">
-        <header>
-            <img src="DSCN0255.JPG" class="avatar" alt="Фото Марии Денисюк">
-            <h1>Мария Денисюк</h1>
-            <p class="tagline">Графический дизайнер & Художник</p>
+        <header class="header-container">
+            <div class="photo-column">
+                <img src="images/DSCN0255.JPG" class="avatar" alt="Фото Марии Денисюк">
+            </div>
+
+            <div class="info-column">
+                <h1>Мария Денисюк</h1>
+                <p class="tagline">Графический дизайнер & Художник</p>
+            </div>
         </header>
-        
-        <section id="about">
+
+        <section class="about-section">
             <h2>Обо мне</h2>
             <div class="about-text">
-                <p>Привет! Я профессиональный графический дизайнер с 5-летним опытом работы. Специализируюсь на создании современных логотипов, брендинге и цифровой иллюстрации.</p>
-                <p>Моя философия — сочетание минимализма и функциональности. Каждый проект для меня — это возможность создать что-то уникальное и запоминающееся.</p>
+                <p>Привет! Я профессиональный графический дизайнер с 5-летним опытом работы.</p>
+                <p>Специализируюсь на создании современных логотипов, брендинге и цифровой иллюстрации.</p>
             </div>
-            
-            <h3>Мои навыки:</h3>
-            <div class="skills">
-                <span class="skill">Adobe Photoshop</span>
-                <span class="skill">Illustrator</span>
-                <span class="skill">Figma</span>
-                <span class="skill">Procreate</span>
-                <span class="skill">Бренд-дизайн</span>
-                <span class="skill">UI/UX</span>
+
+            <div class="skills-section">
+                <h3 class="skills-title">Мои навыки</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon">🖌️</div>
+                        <div class="skill-name">Photoshop</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">✏️</div>
+                        <div class="skill-name">Illustrator</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🎨</div>
+                        <div class="skill-name">Procreate</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🖥️</div>
+                        <div class="skill-name">Figma</div>
+                    </div>
+                </div>
             </div>
         </section>
-        
-        <section id="projects">
-            <h2>Мои проекты</h2>
-            <div class="projects">
-                <a href="#" class="project-btn">Логотип для кафе "Уют"</a>
-                <a href="#" class="project-btn">Брендинг косметики "Lumina"</a>
-                <a href="#" class="project-btn">Иллюстрации для книги</a>
-                <a href="#" class="project-btn">Дизайн мобильного приложения</a>
-                <a href="#" class="project-btn">Упаковка для чая</a>
-                <a href="#" class="project-btn">Анимационные стикеры</a>
+
+        <section class="projects-container">
+            <h3 class="projects-title">Мои проекты</h3>
+            <div class="projects-grid">
+                <!-- Проект 1 - Кафе Уют -->
+                <div class="project-card" onclick="openProject('uyut')">
+                    <div class="card-image-wrapper">
+                        <img src="images/projects/Уют/Water.jpg" alt="Кафе Уют" class="project-image">
+                        <div class="card-overlay">
+                            <span class="project-badge">Новый проект</span>
+                            <h4 class="project-name">Кафе "Уют"</h4>
+                            <div class="view-project-btn">
+                                <span>Смотреть проект</span>
+                                <div class="btn-arrow">→</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Проект 2 - Lumina -->
+                <div class="project-card" onclick="openProject('lumina')">
+                    <div class="card-image-wrapper">
+                        <img src="images/projects/lumina-preview.jpg" alt="Lumina" class="project-image">
+                        <div class="card-overlay">
+                            <h4 class="project-name">Брендинг "Lumina"</h4>
+                            <div class="view-project-btn">
+                                <span>Смотреть проект</span>
+                                <div class="btn-arrow">→</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Проект 3 - Книга -->
+                <div class="project-card" onclick="openProject('book')">
+                    <div class="card-image-wrapper">
+                        <img src="images/projects/book-preview.jpg" alt="Иллюстрации" class="project-image">
+                        <div class="card-overlay">
+                            <h4 class="project-name">Иллюстрации для книги</h4>
+                            <div class="view-project-btn">
+                                <span>Смотреть проект</span>
+                                <div class="btn-arrow">→</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        
+
         <footer>
             <p>© 2025 Мария Денисюк. Все права защищены.</p>
             <p>Свяжитесь со мной: example@email.com | +375 (29)</p>
         </footer>
     </div>
+
+    <div id="uyut-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Кафе "Уют"</h2>
+            <div class="project-details">
+                <div class="project-header">
+                    <div class="project-description">
+                        <p>Уютное кафе в центре города с авторской кухней и атмосферой домашнего тепла. Разработанный
+                            мной фирменный стиль включает:</p>
+                        <ul class="features-list">
+                            <li>Логотип с элементами ручной графики</li>
+                            <li>Цветовую палитру в теплых тонах</li>
+                            <li>Дизайн меню и полиграфии</li>
+                            <li>Фирменные элементы декора</li>
+                        </ul>
+                        <a href="#" class="visit-btn">Посетить сайт →</a>
+                    </div>
+                    <div class="main-project-image">
+                        <img src="images/projects/Уют/фото магазин.jpg" alt="Главное изображение кафе Уют">
+                    </div>
+                </div>
+
+                <div class="project-media">
+                    <div class="media-item">
+                        <h3>Видео презентация</h3>
+                        <div class="media-wrapper">
+                            <video controls poster="images/projects/Уют/видео.mp4">
+                                <source src="images/projects/Уют/видео.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для Lumina -->
+    <div id="lumina-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Брендинг "Lumina"</h2>
+            <div class="project-details">
+                <!-- Добавьте содержимое для Lumina -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для книги -->
+    <div id="book-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Иллюстрации для книги</h2>
+            <div class="project-details">
+                <!-- Добавьте содержимое для книги -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>
-проанализирй и используя мое название файла,если нужно поправь
